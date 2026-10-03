@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulario con text area</title>
+<!--BIANCA YURIDIA NEVAREZ CARVAJAL-->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.1/css/all.min.css"> <!--Herramienta externa para poder adornar la pagina con iconos-->
+</head> 
+<body> 
+<h2>Formulario con text area</h2> 
+<!--Formulario para que el usuario escriba un texto largo-->
+<form action="" method="post"> <!--Preparamos la zona donde el usuario metera datos-->
+Ingresa tu nombre: <!--Indicamos a la persona mediante texto que esperamos que haga-->
+<input type="text" name="nombre"> <!--Creamos la caja en blanco donde va a escribir. La identificamos como "nombre"-->
+<br> <!--Hacemos un salto de linea-->
+Ingresa tu correo: <!--Volvemos a indicar con texto el siguiente dato que necesitamos-->
+<input type="email" name="correo"> <!--Creamos la caja en blanco para su correo. La identificamos como "correo"-->
+<br> <!--Hacemos un salto de linea-->
+Ingresa tus comentarios: <!--Indicamos a la persona mediante texto que escriba sus comentarios-->
+<textarea name="comentarios" rows="1" cols="10"></textarea> <!--Creamos una caja mas grande para texto largo. La identificamos como "comentarios"-->
+<br> <!--Hacemos un salto de linea, para que los botones queden bien acomodados abajo-->
+<input type="submit" value="enviar"> <!--Creamos el boton que atrapa la informacion y la manda. Le ponemos "enviar"-->
+<input type="reset" value="borrar"> <!--Agregamos un segundo boton que sirve para limpiar las cajas por si la persona se equivoca-->
+</form> 
+
+</body>
+</html>
