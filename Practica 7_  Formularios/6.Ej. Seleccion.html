@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formularios con seleccion</title>
+<!--BIANCA YURIDIA NEVAREZ CARVAJAL-->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.1/css/all.min.css"> <!--Herramienta externa para poder adornar la pagina con iconos-->
+</head> 
+<body> 
+<h2>Formularios con seleccion</h2> 
+<!--Formulario con una lista desplegable para ahorrar espacio en la pantalla-->
+<form action="" method="post"> <!--Preparamos la zona donde el usuario metera datos-->
+Ingresa tu nombre: <!--Indicamos a la persona mediante texto que esperamos que haga-->
+<input type="text" name="nombre"> <!--Creamos la caja en blanco donde va a escribir. La identificamos internamente como "nombre"-->
+<br> <!--Hacemos un salto de linea-->
+Selecciona tu pais: <!--Volvemos a indicar con texto lo que necesitamos que elija-->
+<select name="pais"> <!--Creamos la lista desplegable y la identificamos como "pais"-->
+<option value="1">Argentina</option> <!--Agregamos una opcion a la lista a todas-->
+<option value="2">Espana</option> 
+<option value="3">Mexico</option> 
+<option value="4">Guatemala</option> 
+<option value="5">Honduras</option> 
+<option value="6">El Salvador</option> 
+<option value="7">Venezuela</option> 
+<option value="8">Colombia</option> 
+</select> <!--Terminamos la lista desplegable-->
+<br> <!--Hacemos un salto de linea, para que los botones queden bien acomodados abajo-->
+<input type="submit" value="enviar"> <!--Creamos el boton que atrapa la informacion y la manda. Le ponemos "enviar"-->
+<input type="reset" value="borrar"> <!--Agregamos un segundo boton que sirve para limpiar las cajas por si la persona se equivoca-->
+</form> 
+
+</body>
+</html>
