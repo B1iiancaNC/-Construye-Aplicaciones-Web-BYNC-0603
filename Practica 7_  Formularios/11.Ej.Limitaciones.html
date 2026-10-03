@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulario con limitaciones</title>
+<!--BIANCA YURIDIA NEVAREZ CARVAJAL-->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.1/css/all.min.css"> <!--Herramienta externa para poder adornar la pagina con iconos-->
+</head> 
+<body> 
+<h2>Formulario con limitaciones</h2> 
+<!--Formulario con reglas estrictas donde bloqueamos algunas cajas y limitamos otras-->
+<form action="" method="post"> <!--Preparamos la zona donde el usuario metera datos-->
+Ingresa tu nombre: <!--Indicamos a la persona mediante texto que esperamos que haga-->
+<input type="text" name="nombre" disabled><br> <!--Creamos la caja de texto pero la bloqueamos para que no la puedan tocar, y saltamos de linea-->
+Contrasena: <!--Pedimos el dato con texto-->
+<input type="password" name="pass" maxlength="5"><br> <!--Creamos la caja que oculta lo escrito pero le ponemos un tope maximo de 5 caracteres, y saltamos de linea-->
+Comentarios: <!--Pedimos el siguiente dato-->
+<textarea name="comentarios" readonly> <!--Creamos una caja grande para texto pero la ponemos en modo solo lectura para que no la borren-->
+Este es mi comentario y no se puede borrar
+</textarea><br> <!--Cerramos la caja de comentarios y hacemos un salto de linea-->
+</form> 
+
+</body>
+</html>
