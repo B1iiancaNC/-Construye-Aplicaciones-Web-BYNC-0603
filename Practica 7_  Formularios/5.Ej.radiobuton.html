@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formularios con Radioboton</title>
+<!--BIANCA YURIDIA NEVAREZ CARVAJAL-->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.1/css/all.min.css"> <!--Herramienta externa para poder adornar la pagina con iconos-->
+</head> 
+<body> 
+<h2>Formularios con Radioboton</h2> 
+<!--Formulario para que el usuario elija solo una opcion de varias posibles-->
+<form action="" method="post"> <!--Preparamos la zona donde el usuario metera datos-->
+Ingresa tu nombre: <!--Indicamos a la persona mediante texto que esperamos que haga-->
+<input type="text" name="nombre"> <!--Creamos la caja en blanco donde va a escribir. La identificamos internamente como "nombre"-->
+<br> <!--Hacemos un salto de linea-->
+Selecciona el maximo de estudios que tienes: <!--Volvemos a indicar con texto lo que necesitamos que elija-->
+<br> <!--Hacemos un salto de linea-->
+<input type="radio" name="estudios" value="1">Sin estudios <br> <!--Creamos un boton circular para esta opcion y saltamos de linea-->
+<input type="radio" name="estudios" value="2">Primaria <br> <!--Creamos un boton circular para esta opcion y saltamos de linea-->
+<input type="radio" name="estudios" value="3">Secundaria <br> <!--Creamos un boton circular para esta opcion y saltamos de linea-->
+<input type="radio" name="estudios" value="4">Preparatoria <br> <!--Creamos un boton circular para esta opcion y saltamos de linea-->
+<input type="submit" value="enviar"> <!--Creamos el boton que atrapa la informacion y la manda. Le ponemos "enviar"-->
+<input type="reset" value="borrar"> <!--Agregamos un segundo boton que sirve para limpiar las cajas por si la persona se equivoca-->
+</form> 
+
+</body>
+</html>
