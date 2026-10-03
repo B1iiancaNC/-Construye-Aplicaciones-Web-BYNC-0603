@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulario con archivos</title>
+<!--BIANCA YURIDIA NEVAREZ CARVAJAL-->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.1/css/all.min.css"> <!--Herramienta externa para poder adornar la pagina con iconos-->
+</head> 
+<body> 
+<h2>Formulario con archivos</h2> 
+<!--Formulario para que el usuario pueda adjuntar y enviar un archivo como una foto o pdf-->
+<form action="" method="post"> <!--Preparamos la zona donde el usuario metera datos-->
+Ingresa tu nombre: <!--Indicamos a la persona mediante texto que esperamos que haga-->
+<input type="text" name="nombre"> <!--Creamos la caja en blanco donde va a escribir. La identificamos como "nombre"-->
+<br> <!--Hacemos un salto de linea-->
+<input type="file" name="archivo"> <!--Creamos un boton especial para buscar y subir un archivo. Lo identificamos como "archivo"-->
+<br> <!--Hacemos un salto de linea, para que los botones queden bien acomodados abajo-->
+<button type="submit">Enviar <i class="fa-regular fa-paper-plane"></i></button> <!--Creamos el boton que atrapa la informacion y la manda. Usamos la etiqueta button para poder incluir un icono-->
+<button type="reset">Borrar <i class="fa fa-trash"></i></button> <!--Agregamos un segundo boton que sirve para limpiar las opciones, tambien con su propio icono-->
+</form> 
+
+</body>
+</html>
