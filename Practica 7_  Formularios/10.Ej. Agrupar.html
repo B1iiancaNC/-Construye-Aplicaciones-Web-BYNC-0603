@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formularios con agrupamiento</title>
+<!--BIANCA YURIDIA NEVAREZ CARVAJAL-->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.1/css/all.min.css"> <!--Herramienta externa para poder adornar la pagina con iconos-->
+</head> 
+<body> 
+<h2>Formularios con agrupamiento</h2> 
+<!--Formulario que agrupa datos en diferentes cajas para mantener el orden-->
+<form action="" method="post"> <!--Preparamos la zona donde el usuario metera datos-->
+<fieldset> <!--Creamos un marco visual para agrupar varios datos relacionados-->
+<legend>Datos personales</legend> <!--Le ponemos un titulo a esta caja especifica-->
+Nombre y apellido: <!--Indicamos a la persona mediante texto que esperamos que haga-->
+<input type="text" name="nombre_apellido"><br> <!--Creamos la caja en blanco donde va a escribir y saltamos de linea-->
+Documento valido: <!--Pedimos otro dato con texto-->
+<input type="file" name="documento"><br> <!--Creamos un boton especial para subir un archivo y saltamos de linea-->
+Fecha de nacimiento: <!--Pedimos el dato de la fecha-->
+<input type="date" name="fecha_nacimiento"> <!--Creamos una caja que muestra un calendario para elegir fechas-->
+</fieldset> <!--Cerramos esta primera caja de datos personales-->
+<fieldset> <!--Abrimos una segunda caja visual para otro grupo de datos-->
+<legend>Datos de estudio:</legend> <!--Le ponemos su propio titulo a esta nueva caja-->
+Nombre de la escuela: <!--Pedimos el dato con texto-->
+<input type="text" name="escuela"><br> <!--Creamos la caja para escribir y saltamos de linea-->
+Certificado valido: <!--Pedimos el siguiente archivo-->
+<input type="file" name="certificado"><br> <!--Boton para adjuntar archivo y saltamos de linea-->
+Fecha de egreso: <!--Pedimos otra fecha-->
+<input type="date" name="fecha_egreso"> <!--Caja con calendario para elegir la fecha-->
+</fieldset> <!--Cerramos esta segunda caja de datos-->
+<br> <!--Hacemos un salto de linea, para que los botones queden bien acomodados abajo-->
+<button type="submit">Enviar <i class="fa-regular fa-paper-plane"></i></button> <!--Creamos el boton que atrapa la informacion y la manda. Usamos la etiqueta button para poder incluir un icono-->
+<button type="reset">Borrar <i class="fa fa-trash"></i></button> <!--Agregamos un segundo boton que sirve para limpiar las opciones-->
+</form> 
+
+</body>
+</html>
