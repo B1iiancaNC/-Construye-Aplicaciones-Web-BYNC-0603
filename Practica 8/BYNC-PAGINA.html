@@ -1,0 +1,173 @@
+<!-- Bianca Yuridia Nevarez Carvajal-->
+<!-- 0603-->
+<!-- 5I-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesion - Formulario</title>
+    <style>
+        /* estilos base login */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        /* encabezado */
+        header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #dcdcdc;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-izquierda {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0056d2;
+            text-decoration: none;
+        }
+
+        .caja-busqueda {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            padding: 4px 10px;
+            background-color: #fff;
+            width: 280px;
+        }
+
+        .caja-busqueda input {
+            border: none;
+            outline: none;
+            width: 100%;
+        }
+
+        .boton-volver {
+            background-color: #0056d2;
+            color: white;
+            padding: 8px 14px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* caja del formulario */
+        .contenedor-login {
+            max-width: 500px;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        .contenedor-login h2 {
+            font-weight: normal;
+            font-size: 26px;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        .grupo-campo {
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .grupo-campo label {
+            font-size: 14px;
+            width: 200px;
+            text-align: right;
+        }
+
+        .grupo-campo input {
+            padding: 6px 8px;
+            border: 1px solid #777;
+            border-radius: 2px;
+            width: 200px;
+        }
+
+        .grupo-botones {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .grupo-botones button {
+            padding: 5px 15px;
+            border: 1px solid #888;
+            background-color: #e1e1e1;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        .grupo-botones button:hover {
+            background-color: #d0d0d0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- encabezado principal -->
+    <header>
+        <div class="nav-izquierda">
+            <a href="index.html" class="logo">coursera</a>
+            <span>Explorar ▾</span>
+            <span>Titulos de grado</span>
+        </div>
+
+        <div class="caja-busqueda">
+            <input type="text" placeholder="¿Que deseas aprender?">
+            <span>🔍</span>
+        </div>
+
+        <div>
+            <a href="index.html" class="boton-volver">Volver al inicio</a>
+        </div>
+    </header>
+
+    <!-- formulario de inicio de sesion -->
+    <div class="contenedor-login">
+        <h2>Ingresa tus datos</h2>
+
+        <form onsubmit="event.preventDefault(); alert('Datos enviados');">
+            
+            <div class="grupo-campo">
+                <label for="usuario">Ingresa tu nombre de usuario</label>
+                <input type="text" id="usuario" name="usuario" required>
+            </div>
+
+            <div class="grupo-campo">
+                <label for="email">Ingresa tu correo electronico</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="grupo-campo">
+                <label for="password">Ingresa tu contraseña</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <div class="grupo-botones">
+                <button type="submit">Enviar</button>
+                <button type="reset">Borrar</button>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>
