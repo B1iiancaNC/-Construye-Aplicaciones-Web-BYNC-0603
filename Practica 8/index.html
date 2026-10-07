@@ -1,0 +1,361 @@
+<!-- Bianca Yuridia Nevarez Carvajal-->
+<!-- 0603-->
+<!-- 5I-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica - Pagina Principal Estilo Coursera</title>
+    <style>
+        /* estilos base */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        /* barra superior */
+        header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #dcdcdc;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-izquierda {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .imagen-logo {
+            height: 28px;
+            vertical-align: middle;
+        }
+
+        .boton-explorar {
+            background-color: #e8f0fe;
+            color: #0056d2;
+            border: 1px solid #b2c8e6;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .boton-explorar:hover {
+            background-color: #d0e1fd;
+        }
+
+        .caja-busqueda {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            padding: 4px 10px;
+            background-color: #fff;
+            width: 280px;
+        }
+
+        .caja-busqueda input {
+            border: none;
+            outline: none;
+            width: 100%;
+        }
+
+        .nav-derecha {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .enlace-sesion {
+            text-decoration: none;
+            color: #0056d2;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .boton-registro {
+            background-color: #0056d2;
+            color: white;
+            padding: 8px 14px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* panel oculto del filtro */
+        .panel-explorar {
+            display: none;
+            background-color: #ffffff;
+            border-bottom: 2px solid #0056d2;
+            padding: 15px 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .panel-explorar.activo {
+            display: block;
+        }
+
+        .formulario-explorar {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 8px;
+        }
+
+        .formulario-explorar label {
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .formulario-explorar select, .formulario-explorar button {
+            padding: 6px 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .boton-filtrar {
+            background-color: #0056d2;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* contenedor central */
+        .contenedor-principal {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        /* banners */
+        .seccion-banners {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .tarjeta-banner {
+            flex: 1;
+            padding: 20px;
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 140px;
+        }
+
+        .banner-oscuro {
+            background-color: #1a1a1a;
+            color: white;
+        }
+
+        .banner-claro {
+            background-color: #fef3c7;
+            border: 1px solid #fcd34d;
+            color: #333;
+        }
+
+        .contenedor-imagen-banner {
+            width: 110px;
+            height: 110px;
+            border: 2px dashed #888;
+            background-color: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-radius: 4px;
+        }
+
+        .contenedor-imagen-banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* tarjetas de cursos */
+        .seccion-cursos {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 15px;
+            margin-bottom: 25px;
+        }
+
+        .titulo-seccion {
+            font-weight: bold;
+            margin-bottom: 12px;
+            font-size: 16px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 6px;
+        }
+
+        .item-curso {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+
+        .miniatura-curso {
+            width: 40px;
+            height: 40px;
+            border: 1px dashed #aaa;
+            background-color: #eee;
+            overflow: hidden;
+            border-radius: 4px;
+            flex-shrink: 0;
+        }
+
+        .miniatura-curso img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* footer negro */
+        .pie-pagina-negro {
+            background-color: #000000;
+            color: #ffffff;
+            text-align: center;
+            padding: 18px;
+            border-radius: 4px;
+            margin-top: 30px;
+            font-weight: bold;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- barra superior de navegacion -->
+    <header>
+        <div class="nav-izquierda">
+            <a href="index.html">
+                <img src="logo.png" alt="coursera" class="imagen-logo">
+            </a>
+
+            <button class="boton-explorar" onclick="toggleMenu()">Explorar ▾</button>
+            
+            <span style="font-size: 14px; color: #555;">Titulos de grado</span>
+        </div>
+
+        <div class="caja-busqueda">
+            <input type="text" placeholder="¿Que deseas aprender?">
+            <span>🔍</span>
+        </div>
+
+        <div class="nav-derecha">
+            <a href="login.html" class="enlace-sesion">Iniciar Sesion</a>
+            <a href="#" class="boton-registro">Unete gratis</a>
+        </div>
+    </header>
+
+    <!-- menu desplegable de explorar -->
+    <div id="panelExplorar" class="panel-explorar">
+        <strong>Filtro de Cursos y Categorias:</strong>
+        <form class="formulario-explorar" onsubmit="event.preventDefault(); alert('Filtrando cursos...');">
+            <label for="categoria">Categoria:</label>
+            <select id="categoria">
+                <option value="todas">Todas las categorias</option>
+                <option value="ia">Inteligencia Artificial</option>
+                <option value="datos">Ciencia de Datos</option>
+                <option value="programacion">Programacion</option>
+            </select>
+
+            <label for="nivel">Nivel:</label>
+            <select id="nivel">
+                <option value="todos">Todos los niveles</option>
+                <option value="principiante">Principiante</option>
+                <option value="intermedio">Intermedio</option>
+                <option value="avanzado">Avanzado</option>
+            </select>
+
+            <button type="submit" class="boton-filtrar">Buscar Cursos</button>
+        </form>
+    </div>
+
+    <!-- contenido de la pagina -->
+    <div class="contenedor-principal">
+
+        <!-- banners promocionales -->
+        <section class="seccion-banners">
+            
+            <div class="tarjeta-banner banner-oscuro">
+                <div>
+                    <h2>Comience, cambie o avance en su carrera</h2>
+                    <p>Crezca con mas de 10.000 cursos...</p>
+                </div>
+                <div class="contenedor-imagen-banner">
+                    <img src="banner-principal.jpg" alt="Banner Principal">
+                </div>
+            </div>
+
+            <div class="tarjeta-banner banner-claro">
+                <div>
+                    <strong style="color: #d97706;">Microsoft</strong>
+                    <h3>Navigate your career path in tech with Microsoft</h3>
+                </div>
+                <div class="contenedor-imagen-banner">
+                    <img src="banner-microsoft.jpg" alt="Microsoft Tech">
+                </div>
+            </div>
+
+        </section>
+
+        <!-- lista de cursos -->
+        <section class="seccion-cursos">
+            <div class="titulo-seccion">Destacado semanal &rarr;</div>
+
+            <div class="item-curso">
+                <div class="miniatura-curso">
+                    <img src="curso-huggingface.jpg" alt="Hugging Face">
+                </div>
+                <div>
+                    <strong>Desarrollo de IA generativa con Hugging Face</strong><br>
+                    <small style="color: #666;">Hugging Face • Especializacion</small>
+                </div>
+            </div>
+
+            <div class="item-curso">
+                <div class="miniatura-curso">
+                    <img src="curso-ibm.jpg" alt="IBM">
+                </div>
+                <div>
+                    <strong>IBM Planificacion y Analisis Financiero (FP&A)</strong><br>
+                    <small style="color: #666;">IBM • Certificado profesional</small>
+                </div>
+            </div>
+        </section>
+
+        <!-- pie de pagina -->
+        <footer class="pie-pagina-negro">
+            <div>bianca yuridia nevarez carvajal</div>
+            <div>5i</div>
+            <div>24308051280603</div>
+            <div>0603</div>
+        </footer>
+
+    </div>
+
+    <!-- funcion js para abrir el filtro de explorar -->
+    <script>
+        function toggleMenu() {
+            var panel = document.getElementById('panelExplorar');
+            panel.classList.toggle('activo');
+        }
+    </script>
+
+</body>
+</html>
