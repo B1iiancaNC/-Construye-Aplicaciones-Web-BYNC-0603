@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinepolis - Proyecto Escolar</title>
+    <!-- CSS de Tailwind para estilos responsivos sencillos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #0b132b;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+        /* Color azul solido clasico de Cinepolis */
+        .bg-cinepolis {
+            background-color: #0b2341;
+        }
+        .btn-amarillo {
+            background-color: #ffcc00;
+            color: #0b2341;
+        }
+        .btn-amarillo:hover {
+            background-color: #e6b800;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between">
+
+    <!-- BARRA DE NAVEGACION -->
+    <nav class="bg-cinepolis p-4 border-b border-yellow-500/30 sticky top-0 z-30">
+        <div class="max-w-6xl mx-auto flex flex-wrap justify-between items-center gap-4">
+            <!-- Logo -->
+            <a href="#" class="text-2xl font-bold tracking-wider text-white">
+                Ciné<span class="text-yellow-400">polis</span>
+            </a>
+
+            <!-- Enlaces del menu -->
+            <div class="flex space-x-6 text-sm font-semibold">
+                <a href="#cartelera" class="hover:text-yellow-400">Cartelera</a>
+                <a href="#eventos" class="hover:text-yellow-400">Eventos y Conciertos</a>
+                <a href="#club" class="hover:text-yellow-400">Club Cinépolis</a>
+            </div>
+
+            <!-- Boton de Inicio de Sesion -->
+            <button onclick="abrirModal()" class="btn-amarillo px-4 py-2 rounded-lg font-bold text-xs uppercase tracking-wider">
+                Ingresar Tarjeta Club
+            </button>
+        </div>
+    </nav>
+
+
+    <!-- ENCABEZADO -->
+    <header class="bg-cinepolis py-10 px-4 text-center border-b border-slate-800">
+        <h1 class="text-3xl md:text-5xl font-extrabold text-white">
+            Bienvenido a <span class="text-yellow-400">Cinépolis</span>
+        </h1>
+        <p class="text-slate-300 text-sm mt-2">Consulta la cartelera, próximos estrenos y acumulaciones de tu tarjeta Club</p>
+    </header>
+
+
+    <!-- CUERPO: SECCION EN CARTELERA -->
+    <main class="max-w-6xl mx-auto px-4 py-8 w-full">
+        
+        <h2 id="cartelera" class="text-2xl font-bold text-yellow-400 mb-6 border-b border-slate-700 pb-2 flex items-center gap-2">
+            🎬 En Cartelera
+        </h2>
+
+        <!-- Grilla de Peliculas de la imagen -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            
+            <!-- Pelicula 1 -->
+            <div class="bg-slate-800 rounded-lg p-2 border border-slate-700 flex flex-col justify-between">
+                <div>
+                    <img src="el-poder-de-la-red.jpg" alt="El Poder De La Red" class="w-full h-56 object-cover rounded bg-slate-700">
+                    <h3 class="font-bold text-sm text-white mt-2">El Poder De La Red</h3>
+                    <p class="text-[11px] text-blue-400 font-semibold mt-1">TBC • Estreno</p>
+                </div>
+                <button onclick="verSinopsis('El Poder De La Red')" class="mt-3 w-full bg-slate-700 text-white text-xs py-1.5 rounded hover:bg-slate-600">Ver sinopsis</button>
+            </div>
+
+            <!-- Pelicula 2 -->
+            <div class="bg-slate-800 rounded-lg p-2 border border-slate-700 flex flex-col justify-between">
+                <div>
+                    <img src="clayface.jpg" alt="Clayface" class="w-full h-56 object-cover rounded bg-slate-700">
+                    <h3 class="font-bold text-sm text-white mt-2">Clayface</h3>
+                    <p class="text-[11px] text-blue-400 font-semibold mt-1">TBC • Estreno</p>
+                </div>
+                <button onclick="verSinopsis('Clayface')" class="mt-3 w-full bg-slate-700 text-white text-xs py-1.5 rounded hover:bg-slate-600">Ver sinopsis</button>
+            </div>
+
+            <!-- Pelicula 3 -->
+            <div class="bg-slate-800 rounded-lg p-2 border border-slate-700 flex flex-col justify-between">
+                <div>
+                    <img src="avengers-endgame-bonus.jpg" alt="Avengers Endgame Bonus" class="w-full h-56 object-cover rounded bg-slate-700">
+                    <h3 class="font-bold text-sm text-white mt-2">Avengers: Endgame Bonus</h3>
+                    <p class="text-[11px] text-yellow-400 font-semibold mt-1">Clasificación B</p>
+                </div>
+                <button onclick="verSinopsis('Avengers: Endgame Bonus')" class="mt-3 w-full bg-slate-700 text-white text-xs py-1.5 rounded hover:bg-slate-600">Ver sinopsis</button>
+            </div>
+
+            <!-- Pelicula 4 -->
+            <div class="bg-slate-800 rounded-lg p-2 border border-slate-700 flex flex-col justify-between">
+                <div>
+                    <img src="avengers-endgame-bonus-infinity.jpg" alt="Avengers Endgame Bonus Infinity Vision" class="w-full h-56 object-cover rounded bg-slate-700">
+                    <h3 class="font-bold text-sm text-white mt-2">Avengers: Endgame Bonus Infinity Vision</h3>
+                    <p class="text-[11px] text-yellow-400 font-semibold mt-1">Clasificación B</p>
+                </div>
+                <button onclick="verSinopsis('Avengers: Endgame Bonus Infinity Vision')" class="mt-3 w-full bg-slate-700 text-white text-xs py-1.5 rounded hover:bg-slate-600">Ver sinopsis</button>
+            </div>
+
+            <!-- Pelicula 5 -->
+            <div class="bg-slate-800 rounded-lg p-2 border border-slate-700 flex flex-col justify-between">
+                <div>
+                    <img src="avengers-doomsday-infinity.jpg" alt="Avengers Doomsday Infinity Vision" class="w-full h-56 object-cover rounded bg-slate-700">
+                    <h3 class="font-bold text-sm text-white mt-2">Avengers: Doomsday Infinity Vision</h3>
+                    <p class="text-[11px] text-emerald-400 font-semibold mt-1">TBC • Preventa 17th Dic</p>
+                </div>
+                <button onclick="verSinopsis('Avengers: Doomsday Infinity Vision')" class="mt-3 w-full bg-slate-700 text-white text-xs py-1.5 rounded hover:bg-slate-600">Ver sinopsis</button>
+            </div>
+
+            <!-- Pelicula 6 -->
+            <div class="bg-slate-800 rounded-lg p-2 border border-slate-700 flex flex-col justify-between">
+                <div>
+                    <img src="avengers-doomsday.jpg" alt="Avengers Doomsday" class="w-full h-56 object-cover rounded bg-slate-700">
+                    <h3 class="font-bold text-sm text-white mt-2">Avengers: Doomsday</h3>
+                    <p class="text-[11px] text-emerald-400 font-semibold mt-1">TBC • Preventa 17th Dic</p>
+                </div>
+                <button onclick="verSinopsis('Avengers: Doomsday')" class="mt-3 w-full bg-slate-700 text-white text-xs py-1.5 rounded hover:bg-slate-600">Ver sinopsis</button>
+            </div>
+
+        </div>
+
+
+        <!-- SECCION PROXIMOS ESTRENOS Y EVENTOS -->
+        <h2 id="eventos" class="text-2xl font-bold text-yellow-400 mt-12 mb-6 border-b border-slate-700 pb-2 flex items-center gap-2">
+            🎤 Eventos Especiales y Próximos Estrenos
+        </h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            
+            <!-- Evento 1 -->
+            <div class="bg-slate-800 rounded-lg p-2 border border-slate-700 flex flex-col justify-between">
+                <div>
+                    <img src="trivia-night-avengers.jpg" alt="Trivia Night Avengers Doomsday" class="w-full h-56 object-cover rounded bg-slate-700">
+                    <h3 class="font-bold text-sm text-white mt-2">Trivia Night: Avengers Doomsday</h3>
+                    <p class="text-[11px] text-gray-400 mt-1">15 de Diciembre | 11:00 PM</p>
+                </div>
+                <button onclick="verSinopsis('Trivia Night: Avengers Doomsday')" class="mt-3 w-full bg-slate-700 text-white text-xs py-1.5 rounded hover:bg-slate-600">Ver detalles</button>
+            </div>
+
+            <!-- Evento 2 -->
+            <div class="bg-slate-800 rounded-lg p-2 border border-slate-700 flex flex-col justify-between">
+                <div>
+                    <img src="bts-world-tour-buenos-aires.jpg" alt="BTS World Tour Arirang Buenos Aires" class="w-full h-56 object-cover rounded bg-slate-700">
+                    <h3 class="font-bold text-sm text-white mt-2">BTS World Tour Arirang</h3>
+                    <p class="text-[11px] text-gray-400 mt-1">Live Viewing - Buenos Aires</p>
+                </div>
+                <button onclick="verSinopsis('BTS World Tour Arirang (Buenos Aires)')" class="mt-3 w-full bg-slate-700 text-white text-xs py-1.5 rounded hover:bg-slate-600">Ver detalles</button>
+            </div>
+
+            <!-- Evento 3 -->
+            <div class="bg-slate-800 rounded-lg p-2 border border-slate-700 flex flex-col justify-between">
+                <div>
+                    <img src="hybe-cheering-party.jpg" alt="HYBE Cheering Party" class="w-full h-56 object-cover rounded bg-slate-700">
+                    <h3 class="font-bold text-sm text-white mt-2">HYBE Cheering Party</h3>
+                    <p class="text-[11px] text-gray-400 mt-1">Anima a tu artista | En Cines</p>
+                </div>
+                <button onclick="verSinopsis('HYBE Cheering Party')" class="mt-3 w-full bg-slate-700 text-white text-xs py-1.5 rounded hover:bg-slate-600">Ver detalles</button>
+            </div>
+
+            <!-- Evento 4 -->
+            <div class="bg-slate-800 rounded-lg p-2 border border-slate-700 flex flex-col justify-between">
+                <div>
+                    <img src="godzilla-minus-zero.jpg" alt="Godzilla Minus Zero" class="w-full h-56 object-cover rounded bg-slate-700">
+                    <h3 class="font-bold text-sm text-white mt-2">Godzilla Minus Zero</h3>
+                    <p class="text-[11px] text-gray-400 mt-1">Reestreno Especial</p>
+                </div>
+                <button onclick="verSinopsis('Godzilla Minus Zero')" class="mt-3 w-full bg-slate-700 text-white text-xs py-1.5 rounded hover:bg-slate-600">Ver detalles</button>
+            </div>
+
+            <!-- Evento 5 -->
+            <div class="bg-slate-800 rounded-lg p-2 border border-slate-700 flex flex-col justify-between">
+                <div>
+                    <img src="bts-world-tour-sao-paulo.jpg" alt="BTS World Tour Arirang Sao Paulo" class="w-full h-56 object-cover rounded bg-slate-700">
+                    <h3 class="font-bold text-sm text-white mt-2">BTS World Tour Arirang</h3>
+                    <p class="text-[11px] text-gray-400 mt-1">Live Viewing - São Paulo</p>
+                </div>
+                <button onclick="verSinopsis('BTS World Tour Arirang (Sao Paulo)')" class="mt-3 w-full bg-slate-700 text-white text-xs py-1.5 rounded hover:bg-slate-600">Ver detalles</button>
+            </div>
+
+            <!-- Evento 6 -->
+            <div class="bg-slate-800 rounded-lg p-2 border border-slate-700 flex flex-col justify-between">
+                <div>
+                    <img src="rammstein-live-mexico.jpg" alt="Rammstein Live in Mexico City" class="w-full h-56 object-cover rounded bg-slate-700">
+                    <h3 class="font-bold text-sm text-white mt-2">Rammstein</h3>
+                    <p class="text-[11px] text-gray-400 mt-1">Live in Mexico City</p>
+                </div>
+                <button onclick="verSinopsis('Rammstein Live in Mexico City')" class="mt-3 w-full bg-slate-700 text-white text-xs py-1.5 rounded hover:bg-slate-600">Ver detalles</button>
+            </div>
+
+        </div>
+
+
+        <!-- CLUB CINEPOLIS / REGISTRO -->
+        <section id="club" class="mt-12 bg-slate-900 border border-yellow-500/30 rounded-xl p-6 text-center">
+            <h2 class="text-xl font-bold text-yellow-400">Club Cinépolis</h2>
+            <p class="text-xs text-slate-300 mt-1">Ingresa el número de tu tarjeta Club para consultar tu saldo de puntos o crear un nuevo registro ficticio.</p>
+            <div class="mt-4 flex justify-center gap-2 max-w-sm mx-auto">
+                <input type="text" id="tarjetaRapida" placeholder="Número de Tarjeta (Ej: 123456)" class="bg-slate-800 border border-slate-700 text-white text-xs rounded px-3 py-2 w-full focus:outline-none focus:border-yellow-400">
+                <button onclick="validarTarjetaRapida()" class="btn-amarillo font-bold text-xs px-4 py-2 rounded">Ingresar</button>
+            </div>
+            <p id="mensajeTarjeta" class="text-xs text-yellow-300 font-bold mt-2"></p>
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="bg-cinepolis text-slate-300 py-6 text-center text-sm border-t border-slate-800 mt-10">
+        <div class="max-w-6xl mx-auto px-4">
+            <p class="text-white font-bold text-base">Bianca Yuridia Nevarez Carvajal 5I 24308051280603</p>
+        </div>
+    </footer>
+
+
+    <!-- VENTANA MODAL PARA INGRESO DE TARJETA -->
+    <div id="modalLogin" class="fixed inset-0 bg-black/80 hidden flex justify-center items-center p-4 z-50">
+        <div class="bg-slate-900 border border-slate-700 rounded-lg p-6 max-w-sm w-full relative">
+            <button onclick="cerrarModal()" class="absolute top-2 right-3 text-slate-400 text-xl font-bold hover:text-white">&times;</button>
+            <h3 class="text-lg font-bold text-yellow-400 mb-2 text-center">Ingreso Club Cinépolis</h3>
+            <p class="text-xs text-slate-300 mb-4 text-center">Ingresa tus datos para registrar o consultar tu tarjeta Club.</p>
+
+            <form onsubmit="guardarLogin(event)" class="space-y-3">
+                <div>
+                    <label class="block text-xs font-bold text-slate-300 mb-1">Nombre Completo</label>
+                    <input type="text" id="inputNombre" required placeholder="Tu Nombre" class="w-full bg-slate-800 border border-slate-700 rounded p-2 text-xs text-white focus:outline-none focus:border-yellow-400">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-300 mb-1">Numero de Tarjeta Club</label>
+                    <input type="text" id="inputTarjeta" required placeholder="Ej: 12345678" class="w-full bg-slate-800 border border-slate-700 rounded p-2 text-xs text-white focus:outline-none focus:border-yellow-400">
+                </div>
+                <button type="submit" class="w-full btn-amarillo font-bold text-xs py-2 rounded mt-2">
+                    Ingresar Tarjeta
+                </button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- SCRIPT JAVASCRIPT BASICO -->
+    <script>
+        // Funcion 1: Muestra alerta sencilla con la informacion de la pelicula
+        function verSinopsis(titulo) {
+            alert("Has seleccionado: " + titulo + "\nHorarios disponibles: 4:00 PM, 6:30 PM, 9:00 PM.\n\nConsulta en taquilla o usa tu tarjeta Club Cinépolis para comprar boletos.");
+        }
+
+        // Funcion 2: Abrir ventana modal de ingreso de tarjeta
+        function abrirModal() {
+            document.getElementById('modalLogin').classList.remove('hidden');
+        }
+
+        // Funcion 3: Cerrar ventana modal
+        function cerrarModal() {
+            document.getElementById('modalLogin').classList.add('hidden');
+        }
+
+        // Funcion 4: Validar numero de tarjeta rapida en el cuerpo de la pagina
+        function validarTarjetaRapida() {
+            var num = document.getElementById('tarjetaRapida').value;
+            var mensaje = document.getElementById('mensajeTarjeta');
+
+            if (num === "") {
+                mensaje.innerText = "Por favor ingresa un numero de tarjeta.";
+            } else {
+                mensaje.innerText = "✓ Tarjeta " + num + " verificada. Tienes 120 puntos acumulados.";
+            }
+        }
+
+        // Funcion 5: Procesar datos del formulario modal
+        function guardarLogin(evento) {
+            evento.preventDefault();
+            var nombre = document.getElementById('inputNombre').value;
+            var tarjeta = document.getElementById('inputTarjeta').value;
+
+            alert("Bienvenido " + nombre + "\nTarjeta registrada: " + tarjeta + "\nTienes 100 puntos de regalo.");
+            cerrarModal();
+        }
+    </script>
+
+</body>
+</html>
